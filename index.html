@@ -1,3 +1,4 @@
+  
 <!DOCYPY html>
 <html>
 <head>
@@ -15,6 +16,16 @@
     background-size:cover;
     background-color:#CCCCCC;
   }
+  table{
+	  width: 520px;
+	  height: 70px;
+	  border-width: 2px;
+	  background-color: lightblue;
+  }
+  table td{
+	  border-style: solid;
+	  border-collapse: collapse;
+  }
   </style>
 </head>
 <body>
@@ -23,7 +34,73 @@
   </audio>
 <p style="color:blue;font-size:30px;text-align:center;">hello world!</p>
 <p style="color:pink;font-size:50px;text-align:center;">welcome to my home page.</p>
-  <center><img src="思念.jpg"width=500"height="400"/></center>
-    <center><embed src="同桌的你.mp4"width="1500px"height="700px"></center>
+<div class="box1"style="height: 300px;width: 400px;background-color: #b2cae1;margin-top: 0px;float: left;">
+	<h1 style="color: gold;">NAME</h1>
+	<p style="font-size: 30px;">赵子文</p>
+	<h1 style="color: gold;">sex</h1>
+	<p style="font-size: 30px;color: aquamarine;">男</p>
+</div>
+<div align="right">
+			<button onclick="myFunc()"style="font-size: 50px;">打开表格</button>
+			  
+			<!--重定向到其他网页的脚本-->   
+			<script> 
+			   function myFunc() { 
+			     window.location.href="https://fb25385471.jz.fkw.com/"; 
+			   } 
+			</script>
+		</div>
+<div class="box2"style="height: 300px;width: 400px;background-color: #e18dba;margin-top: 250px;align-content: flex-start;">
+			<h1 style="color: gold;">INTERESTS</h1><br /><br />
+			<p style="font-size: 30px;color: blueviolet;">钢琴&nbsp;&nbsp;&nbsp;&nbsp;口琴&nbsp;<br/>
+			棋类&nbsp;&nbsp;&nbsp;&nbsp;折纸</p>
+		</div>
+<hr width="50%" />
+<div>
+	<h1 style="color: chartreuse;text-align: left;">扫码前往我的另一个网址</h1><br />
+	<center><img  src="fb25385471.m.jzfkw.cn.png"/></center>
+</div>
+<div align="top">
+			<script>
+			   function check(){
+			      var name=document.getElementById("name").value;
+			   var pass=document.getElementById("pass").value;
+			   if(name=="tomorrow" && pass=="5201314time"){
+			   alert("进入成功");
+			   window.location.href="first.html";
+			   }
+			   else if(name=="同桌的你"&&pass=="5211314"){
+				   alert("进入成功");
+				   window.location.href="同桌的你.html";
+			   }
+			   else if(name=="魔法城堡"&&pass=="child and memory"){
+			   				   alert("进入成功");
+			   				   window.location.href="魔法城堡.html";
+			   }
+			   else if(name=="微微一笑很倾城"&&pass=="slight smile"){
+			   				   alert("进入成功");
+			   				   window.location.href="微微一笑很倾城.html";
+			   }
+			   else if(name=="刚好遇见你"&&pass=="not forget"){
+			   				   alert("进入成功");
+			   				   window.location.href="刚好遇见你.html";
+			   }
+			   else{
+			   alert("曲目没有或钥密错误");
+			   window.document.f.action="https://www.baidu.com/?tn=18029102_3_dg";
+			   window.document.f.submit();
+			   }
+			   
+			   }
+			</script>
+			
+			<form name="f" action=""style="font-size: 35px;">
+			<center style="color: deepskyblue;">演奏视频</center>
+			<center>曲目:<INPUT TYPE="text" NAME="" id="name"><br></center>
+			<center>钥密:<INPUT TYPE="password" NAME="" id="pass"><br></center>
+			<center><INPUT TYPE="button" value="登入" onclick="check()">
+			<INPUT TYPE="reset" value="重置"></center>
+			</form>
+		</div>
 </body>
 </html>
