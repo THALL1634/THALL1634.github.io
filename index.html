@@ -32,6 +32,58 @@
 <audio autoplay="autoplay" controls="controls" loop="loop" preload="auto"
   src="王雨笙 - Canon (八音盒).mp3">
   </audio>
+
+
+
+<div id="demo" style="overflow:hidden;height:128;width:573;color:#ffffff">
+		  <table border="0" align="left" cellpadding="0" cellspacing="0" cellspace="0">
+		  <tr>
+		    <td height="85" valign="top" id="demo1">
+		      <table width="100%"  border="0" cellspacing="0" cellpadding="0">
+		          <tr>
+		            <td><a href="#"><img src="1.jpg" width="128" height="128" border="0"></a></td>
+		            <td><a href="#"><img src="2.jpg" width="128" height="128" border="0"></a></td>
+		            <td><a href="#"><img src="3.jpg" width="128" height="128" border="0"></a></td>
+		            <td><a href="#"><img src="4.jpg" width="128" height="128" border="0"></a></td>
+		            <td><a href="#"><img src="5.jpg" width="128" height="128" border="0"></a></td>
+		            <td><a href="#"><img src="6.jpg" width="128" height="128" border="0"></a></td>
+		            <td><a href="#"><img src="7.jpg" width="128" height="128" border="0"></a></td>
+		            <td><a href="#"><img src="8.jpg" width="128" height="128" border="0"></a></td>
+		            <td><a href="#"><img src="9.jpg" width="128" height="128" border="0"></a></td>
+		            <td><a href="#"><img src="10.jpg" width="128" height="128" border="0"></a></td>
+		          </tr>
+		        </table>
+		    </td>
+		    <td id="demo2" valign="top"></td>
+		  </tr>
+		  </table>
+		</div>
+		<script>
+		var speed=30
+		demo2.innerHTML=demo1.innerHTML
+		function Marquee(){
+		if(demo2.offsetWidth-demo.scrollLeft<=0)
+		demo.scrollLeft-=demo1.offsetWidth
+		else{
+		demo.scrollLeft++
+		}
+		}
+		var MyMar=setInterval(Marquee,speed)
+		demo.οnmοuseοver=function() {clearInterval(MyMar);}
+		demo.οnmοuseοut=function() {MyMar=setInterval(Marquee,speed);}
+		 
+		 function bigger(){
+		  img.style.width = '400px';
+		  img.style.height = '400px';
+		 }
+		 
+		 function smaller(){
+		  img.style.width = '100px';
+		  img.style.height = '100px';
+		 }
+		 
+		</script>
+
 <p style="color:blue;font-size:30px;text-align:center;">hello world!</p>
 <p style="color:pink;font-size:50px;text-align:center;">welcome to my home page.</p>
 <div class="box1"style="height: 300px;width: 400px;background-color: #b2cae1;margin-top: 0px;float: left;">
