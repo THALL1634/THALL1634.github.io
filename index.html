@@ -25,6 +25,68 @@
 	  border-style: solid;
 	  border-collapse: collapse;
   }
+	
+	
+	
+	
+	
+	* {
+			    margin: 0;
+			    padding: 0;
+			}
+			body,
+			html {
+			    height: 100%;
+			    width: 100%;
+			}
+			.box {
+			    width: 100%;
+			    height: 100%;
+			    display: flex;
+			}
+			.left {
+			    flex: 1;
+			    background-color: #fff;
+			    padding-top: 30px;
+			}
+			.right {
+			    flex: 14;
+			}
+			iframe {
+			    width: 100%;
+			    height: 100%;
+			}
+			.show {
+			    display: block;
+			}
+			.hide {
+			    display: none;
+			}
+			.left span {
+			    display: block;
+			    width: 100%;
+			    height: 40px;
+			    background-color: #ccc;
+			}
+			.menu {
+			    margin-bottom: 5px;
+			}
+			.menu ul li {
+			    width: 100%;
+			    height: 40px;
+			    line-height: 40px;
+			    text-indent: 2em;
+			    background-color: #eee;
+			}
+			.menu ul li:hover {
+			    background-color: pink;
+			}
+			.menu ul .dot {
+			    background-color: purple;
+			}
+	
+	
+	
   </style>
 </head>
 <body>
@@ -51,6 +113,89 @@
 
 
 
+	
+	
+	<div class="box">
+		    <div class="left">
+		        <ul>
+		            <li class="menu">
+		                <span>一级菜单</span>
+		                <ul class="show">
+		                    <li url="http://www.jd.com">二级菜单</li>
+		                    <li url="http://www.4399.com">二级菜单</li>
+		                    <li url="http://www.taobao.com">二级菜单</li>
+		                    <li url="http://www.baidu.com">二级菜单</li>
+		                </ul>
+		            </li>
+		            <li class="menu">
+		                <span>一级菜单</span>
+		                <ul class="hide">
+		                    <li>二级菜单</li>
+		                    <li>二级菜单</li>
+		                    <li>二级菜单</li>
+		                    <li>二级菜单</li>
+		                </ul>
+		            </li>
+		            <li class="menu">
+		                <span>一级菜单</span>
+		                <ul class="hide">
+		                    <li>二级菜单</li>
+		                    <li>二级菜单</li>
+		                    <li>二级菜单</li>
+		                    <li>二级菜单</li>
+		                </ul>
+		            </li>
+		            <li class="menu">
+		                <span>一级菜单</span>
+		                <ul class="hide">
+		                    <li>二级菜单</li>
+		                    <li>二级菜单</li>
+		                    <li>二级菜单</li>
+		                    <li>二级菜单</li>
+		                </ul>
+		            </li>
+		        </ul>
+		    </div>
+		    <div class="right">
+		        <iframe src="http://www.baidu.com" frameborder="0"></iframe>
+		    </div>
+		</div>
+		
+		<script>
+		    let spans = document.querySelectorAll('span')
+		    let menus = document.querySelectorAll('.menu>ul')
+		    let lis = document.querySelectorAll('.menu ul li')
+		    let iframe = document.querySelector('iframe')
+		    for (let i = 0; i < spans.length; i++) {
+		        spans[i].onclick = function () {
+		            let className = menus[i].getAttribute('class')
+		            // console.log(className)
+		            if (className === 'show') {
+		                menus[i].setAttribute('class', 'hide')
+		            } else {
+		                menus[i].setAttribute('class', 'show')
+		            }
+		        }
+		    }
+		
+		    for (let i = 0; i < lis.length; i++) {
+		        lis[i].onclick = function () {
+		            for (let j = 0; j < lis.length; j++) {
+		                lis[j].removeAttribute('class', 'dot')
+		            }
+		            iframe.setAttribute('src', lis[i].getAttribute('url'))
+		            this.setAttribute('class', 'dot')
+		        }
+		    }
+		</script>
+
+
+		<br/><br /><br/><br /><br/><br/><br /><br/><br /><br/>
+	
+	
+	
+	
+	
 
 
 <div id="demo" style="overflow:hidden;height:500;width:1500;color:#ffffff">
