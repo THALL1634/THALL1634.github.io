@@ -35,9 +35,12 @@
             padding:0 auto;
         }
          .tabBox {
+			 position: absolute;
+			 top: 380px;
+			 right: 0px;
              margin: 20px auto;
-             width:500px;
-	     background-color:white;
+             width:1000px;
+	     background-color: antiquewhite;
          }
          .tabBox ul {
              position:relative;
@@ -50,7 +53,7 @@
             /* 同一行，块标签 */
             margin-right:10px;
             padding:0 10px;
-            line-height: 33px;
+            line-height: 60px;
             border:1px solid #AAA;
             cursor: pointer;
          }
@@ -62,7 +65,7 @@
          }
           .tabBox div {
               display: none;
-              line-height: 148px;
+              line-height: 450px;
               text-align: center;
               border:1px solid #AAA;
           }
@@ -122,8 +125,21 @@
 			.menu ul .dot {
 			    background-color: purple;
 			}
-	
-	
+			
+			
+			
+			
+			
+			
+			.box2{
+				position: absolute;
+				height: 300px;
+				width: 400px;
+				background-color: #b2cae1;
+				float: left;
+				top: 400px;
+			}
+			
 	
   </style>
 </head>
@@ -209,46 +225,24 @@
 		 
 		</script>
 
-<p style="color:blue;font-size:30px;text-align:center;">hello world!</p>
-<p style="color:pink;font-size:50px;text-align:center;">welcome to my home page.</p>
-<div class="box1"style="height: 300px;width: 400px;background-color: #b2cae1;margin-top: 0px;float: left;">
-	<h1 style="color: gold;">NAME</h1>
-	<p style="font-size: 30px;">赵子文</p>
-	<h1 style="color: gold;">sex</h1>
-	<p style="font-size: 30px;color: aquamarine;">男</p>
+<p style="color:blue;font-size:30px;text-align:center;position: absolute;top: 200px;left: 700px;">hello world!</p>
+<p style="color:pink;font-size:50px;text-align:center;position: absolute;top: 250px;left: 500px;">welcome to my home page.</p>
+
+<br /><br /><br /><br /><br /><br />
+<div class="box1"style="height: 300px;width: 400px;background-color: #e18dba;margin-top: 100px;float: left;">
+	<h1 style="color: gold;">INTERESTS</h1><br /><br />
+	<p style="font-size: 30px;color: blueviolet;">钢琴&nbsp;&nbsp;&nbsp;&nbsp;口琴&nbsp;<br/>
+	棋类&nbsp;&nbsp;&nbsp;&nbsp;折纸</p>
 </div>
-<div align="right">
-			<button onclick="myFunc()"style="font-size: 50px;">访问另一个网址</button>
-			  
-			<!--重定向到其他网页的脚本-->   
-			<script> 
-			   function myFunc() { 
-			     window.location.href="https://fb25385471.jz.fkw.com/"; 
-			   } 
-			</script>
-		</div>
-	<br /><br /><br /><br /><br />
-<div class="box2"style="height: 300px;width: 400px;background-color: #e18dba;margin-top: 250px;align-content: flex-start;float:left;">
-			<h1 style="color: gold;">INTERESTS</h1><br /><br />
-			<p style="font-size: 30px;color: blueviolet;">钢琴&nbsp;&nbsp;&nbsp;&nbsp;口琴&nbsp;<br/>
-			棋类&nbsp;&nbsp;&nbsp;&nbsp;折纸</p>
-		</div>
-	<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-<hr width="90%" />
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+
+
+
+
+
+
+
+
+
 	<div class="tabBox" id="tabBox">
         <!-- 上面三个tab签 -->
         <ul>
@@ -269,7 +263,49 @@
 			<a href="https://fb25385471.m.jzfkw.cn/">我的网址</a>
 		</div>
     </div>
-     <script>
+
+
+
+
+
+
+
+
+
+
+	<br /><br /><br /><br /><br />
+<div class="box2">
+	<h1 style="color: gold;">NAME</h1>
+	<p style="font-size: 30px;">赵子文</p>
+	<h1 style="color: gold;">sex</h1>
+	<p style="font-size: 30px;color: aquamarine;">男</p>
+</div>
+
+	
+	
+	
+	
+	
+	
+	<div style="position: absolute;top: 950px;right: 0px;">
+				<button onclick="myFunc()"style="font-size: 50px;">访问另一个网址</button>
+				  
+				<!--重定向到其他网页的脚本-->   
+				<script> 
+				   function myFunc() { 
+				     window.location.href="https://fb25385471.jz.fkw.com/"; 
+				   } 
+				</script>
+			</div>
+	
+	
+	<hr width="80%" />
+	<br /><br />
+	
+	
+	
+
+     <script>2
         //   思路： 1.给所有的ul绑定点击事件，当点击任何一个li的时候，都做第二步操作
         //         2.可以先让所有的li && div的class都为空（xxx.className=''）, 再让当前点击的这个li和对应的div有className这个样式类即可
         //获取id为tabBox的所有li和div
