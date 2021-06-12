@@ -81,6 +81,8 @@
 			    width: 100%;
 			}
 			.box {
+				position: absolute;
+				top: 2000px;
 			    width: 100%;
 			    height: 100%;
 			    display: flex;
@@ -140,7 +142,127 @@
 				top: 400px;
 			}
 			
-	
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			#images {
+			    width: 400px;
+			    height: 600px;
+			    overflow: hidden;
+			    position: absolute;
+			    margin: 20px auto;
+				left: 100px;
+				top: 1200px;
+			}
+			#images img {
+			    width: 400px;
+			    height: 600px;
+			    position: absolute;
+			    top: 0;
+			    left: -400px;
+			    z-index: 1;
+			    opacity: 1;
+			    transition: all linear 500ms;
+			    -o-transition: all linear 500ms;
+			    -moz-transition: all linear 500ms;
+			    -webkit-transition: all linear 500ms;
+			}
+			#images img:target {
+			    left: 0;
+			    z-index: 9;
+			    opacity: 1;
+			}
+			#images img:first-child {
+			    left: 0;
+			}
+			#slider {
+				position: absolute;
+				left: 140px;
+				top: 1850px;
+			    width: 400px;
+			    height: 50px;
+			    margin: 20px auto;
+			}
+			#slider a {
+			    text-decoration: none;
+			    background: #45b97c;
+			    border: 1px solid #C6E4F2;
+			    padding: 16px 24px;
+			    color: #222;
+			    margin: 20px auto;
+			}
+			#slider a:hover {
+			    background: #C6E4F2;
+				}
+				
+				
+				
+			
+			
+			#images1 {
+			    width: 400px;
+			    height: 600px;
+			    overflow: hidden;
+			    position: absolute;
+			    margin: 20px auto;
+				right: 100px;
+				top: 1200px;
+			}
+			#images1 img {
+			    width: 400px;
+			    height: 600px;
+			    position: absolute;
+			    top: 0;
+			    left: -400px;
+			    z-index: 1;
+			    opacity: 1;
+			    transition: all linear 500ms;
+			    -o-transition: all linear 500ms;
+			    -moz-transition: all linear 500ms;
+			    -webkit-transition: all linear 500ms;
+			}
+			#images1 img:target {
+			    left: 0;
+			    z-index: 9;
+			    opacity: 1;
+			}
+			#images1 img:first-child {
+			    left: 0;
+			}
+			#slider1 {
+				position: absolute;
+				right: 60px;
+				top: 1850px;
+			    width: 400px;
+			    height: 50px;
+			    margin: 20px auto;
+			}
+			#slider1 a {
+			    text-decoration: none;
+			    background: #45b97c;
+			    border: 1px solid #C6E4F2;
+			    padding: 16px 24px;
+			    color: #222;
+			    margin: 20px auto;
+			}
+			#slider1 a:hover {
+			    background: #C6E4F2;
+				}
+			
+			
+			
+			
+			
+			
+			
+			
   </style>
 </head>
 <body>
@@ -301,6 +423,68 @@
 	
 	<hr width="80%" />
 	<br /><br />
+	
+	
+	
+	
+	<h1 style="font: bold 35px/60px Helvetica, Arial, Sans-serif;text-align: center; color: #eee;
+	text-shadow: 0px 2px 6px #333;">CSS3 Image Slider</h1>
+	<hr width="100%"color="red" />
+	<div>
+		<div id="images">
+		    <img id="image1" src="1.jpg" />
+		    <img id="image2" src="2.jpg" />
+		    <img id="image3" src="3.jpg" />
+		        <img id="image4" src="4.jpg" />
+		        <img id="image5" src="5.jpg" />
+		</div>
+		<div id="slider">
+		    <a href="#image1">1</a>
+		    <a href="#image2">2</a>
+		    <a href="#image3">3</a>
+		    <a href="#image4">4</a>
+	            <a href="#image5">5</a>
+		</div>
+		
+		
+		
+		<div id="images1">
+		    <img id="image1" src="1.jpg" />
+		    <img id="image2" src="2.jpg" />
+		    <img id="image3" src="3.jpg" />
+		    <img id="image4" src="4.jpg" />
+		    <img id="image5" src="5.jpg" />
+		</div>
+		<div id="slider1">
+		    <a href="#image1">1</a>
+		    <a href="#image2">2</a>
+		        <a href="#image3">3</a>
+		        <a href="#image4">4</a>
+		        <a href="#image5">5</a>
+		</div>
+		
+		
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<br /><br />
+	<hr style="position: absolute;top: 1950px;"color="red"width="100%"/>
 	
 	
 	
@@ -495,6 +679,7 @@
 
 
 		<br/><br /><br/><br /><br/><br/><br /><br/><br /><br/>
+		<hr width="70%"style="position: absolute;top: 2850px;"color="wheat" />
 	
 	
 	
@@ -503,11 +688,11 @@
 
 
 
-<div>
+<div style="position: absolute;top: 3000px;left: 600px;">
 	<h1 style="color: chartreuse;text-align: left;">扫码前往我的另一个网址</h1><br />
 	<center><img  src="fb25385471.m.jzfkw.cn.png"/></center>
 </div><br /><br /><br />
-<div align="top">
+<div align="top"style="position: absolute;top: 3300px;left: 650px;">
 			<script>
 			   function check(){
 			      var name=document.getElementById("name").value;
