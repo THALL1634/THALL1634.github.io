@@ -12,6 +12,30 @@
 			width:820px;
 			height:550px;
 		}
+		
+		
+		
+		
+		
+		
+		.helper{
+			position: absolute;
+			width: 800px;
+			height: 600px;
+			top: 700px;
+			left: 100px;
+		}
+		.helper button{
+			width: 250px;
+			height: 200px;
+			font-size: 60px;
+		}
+		
+		
+		
+		
+		
+		
 		.display {
 			position:absolute;
 			top:0px;
@@ -328,25 +352,7 @@
 		<div id="prompt"></div>
 	</div>
 	<div id="gamePanel" ></div><br/>
-	<div id="helper">
-	    <table>
-	        <tr>
-	            <td></td>
-	            <td><button onclick="keydown(38);">上</button></td>
-	            <td></td>
-	        </tr>
-	        <tr>
-	            <td><button onclick="keydown(37);">左</button></td>
-	            <td><button onclick="keydown(80);" id="pause">2S</button></td>
-	            <td><button onclick="keydown(39);">右</button></td>
-	        </tr>
-	        <tr>
-	            <td></td>
-	            <td><button onclick="keydown(40);">下</button></td>
-	            <td></td>
-	        </tr>
-	    </table><a href="index.html">再玩一次</a>
-	</div>
+	
 	<div id="operator">
 		选择关卡：<select id="pass" onchange="barrer();">
 			<option value="1">关卡1</option>
@@ -365,6 +371,27 @@
 		<input type="button" id="start" value="开始" onclick="startGame();" />&nbsp&nbsp
 		<input type="button" id="resets" value="重玩" onclick="init();" />
 	</div>
+	
+	<div id="helper"class="helper">
+		<p style="color: grey;text-align: center;font-size: 10px;">手机辅助键盘</p>
+	    <table>
+	        <tr>
+	            <td></td>
+	            <td><button onclick="keydown(38);">上</button></td>
+	            <td></td>
+	        </tr>
+	        <tr>
+	            <td><button onclick="keydown(37);">左</button></td>
+	            <td><button onclick="keydown(80);" id="pause">2S</button></td>
+	            <td><button onclick="keydown(39);">右</button></td>
+	        </tr>
+	        <tr>
+	            <td></td>
+	            <td><button onclick="keydown(40);">下</button></td>
+	            <td></td>
+	        </tr>
+	</div>
+	
 	<div id="result"></div>
 </div>
 </body>
