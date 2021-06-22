@@ -36,7 +36,7 @@
         }
          .tabBox {
 			 position: absolute;
-			 top: 380px;
+			 top: 200px;
 			 right: -300px;
              margin: 20px auto;
              width:700px;
@@ -134,14 +134,7 @@
 			
 			
 			
-			.box2{
-				position: absolute;
-				height: 300px;
-				width: 400px;
-				background-color: #b2cae1;
-				float: left;
-				top: 400px;
-			}
+
 			
 			
 			
@@ -264,6 +257,74 @@
 			
 			
 			
+			
+			
+			
+			
+			
+			.shell{
+				top: 200px;
+				position: absolute;
+				width: 280px;
+				height: 650px;
+				background-color: #8a98c9;
+			}
+			.buttons{
+				margin: 60px 0;
+				color: #fff;
+			}
+			.li{
+				letter-spacing: 2px;
+				font: 600 17px '';
+				padding: 16px 52px;
+				transition: .3s;
+			}
+			.li::after{
+				content: '';
+				position: absolute;
+				left: 20px;
+				margin-top: -22px;
+				display: block;
+				width: 20px;
+				height: 20px;
+				background-color: #fff;
+				border-radius: 50%;
+			}
+			.buttons>li:hover{
+				background-color: #beb5df;
+			}
+			.li ul{
+				width: 0;
+				height: 530px;
+				padding: 60px 0;
+				position: absolute;
+				top: 0;
+				right: 0;
+				overflow: hidden;
+				background-color: #59699b;
+				transition: .3s;
+			}
+			.li ul li{
+				padding: 16px 24px;
+				transition: .3s;
+			}
+			.li:hover ul{
+				width: 228px;
+			}
+			.li ul li:hover{
+				background-color: #828eb9;
+			}
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
   </style>
 </head>
 <body>
@@ -348,15 +409,56 @@
 		 
 		</script>
 
-<p style="color:blue;font-size:30px;text-align:center;position: absolute;top: 200px;left: 700px;">hello world!</p>
-<p style="color:pink;font-size:50px;text-align:center;position: absolute;top: 250px;left: 500px;">welcome to my home page.</p>
 
-<br /><br /><br /><br /><br /><br />
-<div class="box1"style="height: 300px;width: 400px;background-color: #e18dba;margin-top: 100px;float: left;">
-	<h1 style="color: gold;">INTERESTS</h1><br /><br />
-	<p style="font-size: 30px;color: blueviolet;">钢琴&nbsp;&nbsp;&nbsp;&nbsp;口琴&nbsp;<br/>
-	棋类&nbsp;&nbsp;&nbsp;&nbsp;折纸</p>
-</div>
+
+
+
+
+
+
+
+<nav class="shell">
+			<ul class="buttons">
+				<li class="li">
+					management
+					<ul>
+						<li>Sold baby</li>
+						<li>Evalution</li>
+						<li>Shopkeeper</li>
+						<li>Management</li>
+					</ul>
+				</li>
+				
+				<li class="li">
+					logisitcs
+					<ul>
+						<li>Warehouse</li>
+						<li>deliver goods</li>
+						<li>stock</li>
+						<li>nail</li>
+						<li>return goods</li>
+					</ul>
+				</li>
+				
+				<li class="li">
+					treasure
+					<ul>
+						<li>Relese baby</li>
+						<li>Posting Details</li>
+						<li>Shop decoration</li>
+					</ul>
+				</li>
+				
+				<li class="li">
+					financial service
+					<ul>
+						<li>payment</li>
+						<li>Loan goods</li>
+						<li>Collection in advance</li>
+					</ul>
+				</li>
+			</ul>
+		</nav>
 
 
 
@@ -409,12 +511,7 @@
 
 
 	<br /><br /><br /><br /><br />
-<div class="box2">
-	<h1 style="color: gold;">NAME</h1>
-	<p style="font-size: 30px;">赵子文</p>
-	<h1 style="color: gold;">sex</h1>
-	<p style="font-size: 30px;color: aquamarine;">男</p>
-</div>
+
 
 	
 	
@@ -422,7 +519,7 @@
 	
 	
 	
-	<div style="position: absolute;top: 950px;right: 0px;">
+	<div style="position: absolute;top: 780px;right: 0px;">
 				<button onclick="myFunc()"style="font-size: 50px;">访问另一个网址</button>
 				  
 				<!--重定向到其他网页的脚本-->   
@@ -434,15 +531,15 @@
 			</div>
 	
 	
-	<hr width="80%" />
+	<hr width="80%" style="position: absolute;top: 1100px;"/>
 	<br /><br />
 	
 	
 	
 	
-	<h1 style="font: bold 35px/60px Helvetica, Arial, Sans-serif;text-align: center; color: #eee;
+	<h1 style="position: absolute;top: 1100px;left:600px;font: bold 35px/60px Helvetica, Arial, Sans-serif;color: #eee;
 	text-shadow: 0px 2px 6px #333;">Pictuer of Hamster</h1>
-	<hr width="100%"color="red" />
+	<hr width="100%"color="red"style="position: absolute;top: 1190px;" />
 	<div>
 		<div id="images">
 		    <img id="image1" src="mouse/hamster/h15.jpg" />
