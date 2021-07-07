@@ -30,6 +30,59 @@
 	
 	
 	
+	
+	
+	
+	
+	
+	#div1{
+	  position: absolute;
+	  top: 2050px;left: 50px;
+	  width:400px;
+	  height:800px;
+	  background: url(images/数据1.jpg);
+	  background-size: cover;
+		display:none;
+	}
+	#div2{
+	  position: absolute;
+	  top: 2050px;left: 500px;
+	  width:400px;
+	  height:800px;
+	  background: url(images/数据2.jpg);
+	  background-size: cover;
+		display:none;
+	}
+	#div3{
+	  position: absolute;
+	  top: 2050px;left: 950px;
+	  width:400px;
+	  height:800px;
+	  background: url(images/数据3.jpg);
+	  background-size: cover;
+		display:none;
+	}
+	#div4{
+	  position: absolute;
+	  top: 2050px;left: 1400px;
+	  width:400px;
+	  height:800px;
+	  background: url(images/数据4.jpg);
+	  background-size: cover;
+		display:none;
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	* {
             margin:0 auto;
             padding:0 auto;
@@ -82,7 +135,7 @@
 			}
 			.box {
 				position: absolute;
-				top: 2000px;
+				top: 2900px;
 			    width: 1400px;
 			    height: 800px;
 			    display: flex;
@@ -725,8 +778,105 @@
 	
 	
 	
+	<script>
+	function xx()
+	{
+		var oxt=document.getElementById("xt");
+		var odiv=document.getElementById("div1");
+		
+		
+		if(odiv.style.display=="none")
+		{
+			odiv.style.display="block";
+			oxt.value="隐藏";
+		}
+		else
+		{
+			odiv.style.display="none";
+			oxt.value="图一"
+		}
+	}
+	
+	function yy()
+	{
+		var oyt=document.getElementById("yt");
+		var odiv=document.getElementById("div2");
+		
+		
+		if(odiv.style.display=="none")
+		{
+			odiv.style.display="block";
+			oyt.value="隐藏";
+		}
+		else
+		{
+			odiv.style.display="none";
+			oyt.value="图二"
+		}
+	}
+	
+	function zz()
+	{
+		var ozt=document.getElementById("zt");
+		var odiv=document.getElementById("div3");
+		
+		
+		if(odiv.style.display=="none")
+		{
+			odiv.style.display="block";
+			ozt.value="隐藏";
+		}
+		else
+		{
+			odiv.style.display="none";
+			ozt.value="图三"
+		}
+	}
+	
+	function ww()
+	{
+		var owt=document.getElementById("wt");
+		var odiv=document.getElementById("div4");
+		
+		
+		if(odiv.style.display=="none")
+		{
+			odiv.style.display="block";
+			owt.value="隐藏";
+		}
+		else
+		{
+			odiv.style.display="none";
+			owt.value="图四"
+		}
+	}
+	</script>
+	<input type="button" id="xt" value="图一"  onclick="xx()" style="position: absolute;top: 2000px;left: 50px;"/>
+	<div id="div1" ></div>
+	
+	<input type="button" id="yt" value="图二"  onclick="yy()" style="position: absolute;top: 2000px;left: 500px;"/>
+	<div id="div2" ></div>
+	
+	<input type="button" id="zt" value="图三"  onclick="zz()" style="position: absolute;top: 2000px;left: 950px;"/>
+	<div id="div3" ></div>
+	
+	<input type="button" id="wt" value="图四"  onclick="ww()" style="position: absolute;top: 2000px;left: 1400px;"/>
+	<div id="div4" ></div>
 	
 	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<hr width="85%" color="mediumpurple" style="position: absolute;top: 2895px;" />
 	<div class="box">
 		    <div class="left">
 		        <ul>
@@ -802,7 +952,7 @@
 
 
 		<br/><br /><br/><br /><br/><br/><br /><br/><br /><br/>
-		<hr width="70%"style="position: absolute;top: 2850px;"color="wheat" />
+		<hr width="70%"style="position: absolute;top: 3750px;"color="wheat" />
 	
 	
 	
@@ -811,11 +961,11 @@
 
 
 
-<div style="position: absolute;top: 3000px;left: 600px;">
+<div style="position: absolute;top: 3900px;left: 600px;">
 	<h1 style="color: chartreuse;text-align: left;">扫码前往我的另一个网址</h1><br />
 	<center><img  src="fb25385471.m.jzfkw.cn.png"/></center>
 </div><br /><br /><br />
-<div align="top"style="position: absolute;top: 3500px;left: 630px;">
+<div align="top"style="position: absolute;top:4400px;left: 630px;">
 			<script>
 			   function check(){
 			      var name=document.getElementById("name").value;
