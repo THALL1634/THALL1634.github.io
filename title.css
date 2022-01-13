@@ -1,0 +1,39 @@
+h2{
+	color: #ffc4fb;
+	
+	animation: show_name 2s ease-in-out 0s 1 forwards;
+}
+
+@keyframes show_name{
+	0%{
+		opacity: 0;
+	}
+	100%{
+		opacity: 1;
+	}
+}
+
+
+h2::before{
+	position: absolute;
+	content: 'My Webpage';
+	color: transparent;
+	background-image: linear-gradient(to right,#ffaaff,#55aaff,#00ff00,#aaffff,#aa00ff,#ff00ff);
+	-webkit-background-clip: text;
+	
+	clip-path: polygon(-20% 0%,0% 0%,-10% 100%,-30% 100%);
+	
+	animation: light 5s 2s infinite;
+}
+
+@keyframes light{
+	0%{
+		clip-path: polygon(-20% 0%,0% 0%,-10% 100%,-30% 100%);
+	}
+	50%{
+		clip-path: polygon(100% 0%,120% 0%,110% 100%,90% 100%);
+	}
+	100%{
+		clip-path: polygon(-20% 0%,0% 0%,-10% 100%,-30% 100%);
+	}
+}
