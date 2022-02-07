@@ -1,996 +1,178 @@
-<!DOCYPY html>
+<!DOCTYPE html>
 <html>
-<head>
-<meta charset="utf-8">
-<title>THALL</title>
-<link rel="stylesheet" href="title.css" />
-<style>
-  audio{
-    display:none;
-  }
-  body{
-    background-image:url(46.jpg);
-    background-position:center;
-    background-repeat:no-repeat;
-    background-attachment:fixed;
-    background-size:cover;
-    background-color:#CCCCCC;
-  }
-  table{
-	  width: 520px;
-	  height: 70px;
-	  border-width: 2px;
-	  background-color: lightblue;
-  }
-  table td{
-	  border-style: solid;
-	  border-collapse: collapse;
-  }
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	#div1{
-	  position: absolute;
-	  top: 2050px;left: 50px;
-	  width:400px;
-	  height:800px;
-	  background: url(数据1.jpg);
-	  background-size: cover;
-		display:none;
-	}
-	#div2{
-	  position: absolute;
-	  top: 2050px;left: 500px;
-	  width:400px;
-	  height:800px;
-	  background: url(数据2.jpg);
-	  background-size: cover;
-		display:none;
-	}
-	#div3{
-	  position: absolute;
-	  top: 2050px;left: 950px;
-	  width:400px;
-	  height:800px;
-	  background: url(数据3.jpg);
-	  background-size: cover;
-		display:none;
-	}
-	#div4{
-	  position: absolute;
-	  top: 2050px;left: 1400px;
-	  width:400px;
-	  height:800px;
-	  background: url(数据4.jpg);
-	  background-size: cover;
-		display:none;
-	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	* {
-            margin:0 auto;
-            padding:0 auto;
-        }
-         .tabBox {
-			 position: absolute;
-			 top: 200px;
-			 right: -300px;
-             margin: 20px auto;
-             width:700px;
-	     background-color: antiquewhite;
-         }
-         .tabBox ul {
-             position:relative;
-             top:1px;
-             right:40px;
-             /* 相对于之前的位置向下移动1px,使边框重合 */
-         }
-         .tabBox ul li {
-            display: inline-block;
-            /* 同一行，块标签 */
-            margin-right:10px;
-            padding:0 10px;
-            line-height: 60px;
-            border:1px solid #AAA;
-            cursor: pointer;
-         }
-         .tabBox ul li.active {
-             color:lightcoral;
-             font-weight:bold;
-             border-bottom-color:#fff;
-             /* 当前li的边框覆盖率div的边框，我们让li的下边框为背景颜色白色，这样看上去就像没边框 */
-         }
-          .tabBox div {
-              display: none;
-              line-height: 450px;
-              text-align: center;
-              border:1px solid #AAA;
-          }
-          .tabBox div.active {
-              display: block;
-              /* div .active加空格是后代筛选，先搜索div在div中筛选，div .active不加空格当前div标签的二次筛选，同级筛选 */
-          }
-	
-	
-			body,
-			html {
-			    height: 100%;
-			    width: 100%;
-			}
-			.box {
-				position: absolute;
-				top: 2900px;
-			    width: 1400px;
-			    height: 800px;
-			    display: flex;
-			}
-			.left {
-			    flex: 1;
-			    background-color: #fff;
-			    padding-top: 30px;
-			}
-			.right {
-			    flex: 14;
-			}
-			iframe {
-			    width: 1350px;
-			    height: 800px;
-			}
-			.show {
-			    display: block;
-			}
-			.hide {
-			    display: none;
-			}
-			.left span {
-			    display: block;
-			    width: 100px;
-			    height: 40px;
-			    background-color: #ccc;
-			}
-			.menu {
-			    margin-bottom: 5px;
-			}
-			.menu ul li {
-			    list-style-type: none;
-			    width: 125px;
-			    height: 40px;
-			    line-height: 40px;
-			    text-indent: 2em;
-			    background-color: #eee;
-			}
-			.menu ul li:hover {
-			    background-color: pink;
-			}
-			.menu ul .dot {
-			    background-color: purple;
-			}
-			
-			
-			
-			
-			
-			
-
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			#images {
-			    width: 400px;
-			    height: 600px;
-			    overflow: hidden;
-			    position: absolute;
-			    margin: 20px auto;
-				left: 100px;
-				top: 1200px;
-			}
-			#images img {
-			    width: 400px;
-			    height: 600px;
-			    position: absolute;
-			    top: 0;
-			    left: -400px;
-			    z-index: 1;
-			    opacity: 1;
-			    transition: all linear 500ms;
-			    -o-transition: all linear 500ms;
-			    -moz-transition: all linear 500ms;
-			    -webkit-transition: all linear 500ms;
-			}
-			#images img:target {
-			    left: 0;
-			    z-index: 9;
-			    opacity: 1;
-			}
-			#images img:first-child {
-			    left: 0;
-			}
-			#slider {
-				position: absolute;
-				left: 120px;
-				top: 1850px;
-			    width: 400px;
-			    height: 50px;
-			    margin: 20px auto;
-			}
-			#slider a {
-			    text-decoration: none;
-			    background: #45b97c;
-			    border: 1px solid #C6E4F2;
-			    padding: 10px 15px;
-			    color: #222;
-			    margin: 20px auto;
-			}
-			#slider a:hover {
-			    background: #C6E4F2;
-				}
-				
-				
-				
-			
-			
-			#images1 {
-			    width: 400px;
-			    height: 600px;
-			    overflow: hidden;
-			    position: absolute;
-			    margin: 20px auto;
-				right: 100px;
-				top: 1200px;
-			}
-			#images1 img {
-			    width: 400px;
-			    height: 600px;
-			    position: absolute;
-			    top: 0;
-			    left: -400px;
-			    z-index: 1;
-			    opacity: 1;
-			    transition: all linear 500ms;
-			    -o-transition: all linear 500ms;
-			    -moz-transition: all linear 500ms;
-			    -webkit-transition: all linear 500ms;
-			}
-			#images1 img:target {
-			    left: 0;
-			    z-index: 9;
-			    opacity: 1;
-			}
-			#images1 img:first-child {
-			    left: 0;
-			}
-			#slider1 {
-				position: absolute;
-				right: 80px;
-				top: 1850px;
-			    width: 400px;
-			    height: 50px;
-			    margin: 20px auto;
-			}
-			#slider1 a {
-			    text-decoration: none;
-			    background: #45b97c;
-			    border: 1px solid #C6E4F2;
-			    padding: 10px 15px;
-			    color: #222;
-			    margin: 20px auto;
-			}
-			#slider1 a:hover {
-			    background: #C6E4F2;
-				}
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			.shell{
-				top: 210px;
-				position: absolute;
-				width: 280px;
-				height: 650px;
-				background-color: #8a98c9;
-			}
-			.buttons{
-				margin: 60px 0;
-				color: #fff;
-			}
-			.li{
-				letter-spacing: 2px;
-				font: 600 17px '';
-				padding: 16px 52px;
-				transition: .3s;
-			}
-			.li::after{
-				content: '';
-				position: absolute;
-				left: 20px;
-				margin-top: -22px;
-				display: block;
-				width: 20px;
-				height: 20px;
-				background-color: #fff;
-				border-radius: 50%;
-			}
-			.buttons>li:hover{
-				background-color: #beb5df;
-			}
-			.li ul{
-				width: 0;
-				height: 530px;
-				padding: 60px 0;
-				position: absolute;
-				top: 0;
-				right: 0;
-				overflow: hidden;
-				background-color: #59699b;
-				transition: .3s;
-			}
-			.li ul li{
-				padding: 16px 24px;
-				transition: .3s;
-			}
-			.li:hover ul{
-				width: 228px;
-			}
-			.li ul li:hover{
-				background-color: #828eb9;
-			}
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-  </style>
-</head>
-<body>
-<audio autoplay="autoplay" controls="controls" loop="loop" preload="auto"
-  src="天空之城.mp3">
-  </audio>
-  
-  <h2 align="center" style="font-size: 50px;">My Webpage</h2>
-
-
-	
-
-	
-	<a target="_blank" name="pw_pc" href="https://fb25385471.jz.fkw.com/" style="display: none;">我的网址pc端</a>
-	<a target="_blank" name="pw_phone" href="https://fb25385471.m.jzfkw.cn/"  style="display: none;">我的网址手机端</a>
-	<hr width="60%" />
-	
-
-	<div id="demo" style="overflow:hidden;height:500;width:1500;color:#ffffff">
-		  <table border="0" align="left" cellpadding="0" cellspacing="0" cellspace="0">
-		  <tr>
-		    <td height="85" valign="top" id="demo1">
-		      <table width="100%"  border="0" cellspacing="0" cellpadding="0">
-		          <tr>
-		            <td><a href="#"><img src="1.jpg" width="128" height="128" border="0"></a></td>
-		            <td><a href="#"><img src="mouse/fancy rat/f1.jpg" width="128" height="128" border="0"></a></td>
-		            <td><a href="#"><img src="mouse/fancy rat/f2.jpg" width="128" height="128" border="0"></a></td>
-		            <td><a href="#"><img src="mouse/fancy rat/f10.jpg" width="128" height="128" border="0"></a></td>
-		            <td><a href="#"><img src="5.jpg" width="128" height="128" border="0"></a></td>
-		            <td><a href="#"><img src="mouse/fancy rat/f14.jpg" width="128" height="128" border="0"></a></td>
-		            <td><a href="#"><img src="mouse/fancy rat/f17.jpg" width="128" height="128" border="0"></a></td>
-		            <td><a href="#"><img src="mouse/fancy rat/f5.jpg" width="128" height="128" border="0"></a></td>
-		            <td><a href="#"><img src="mouse/fancy rat/f18.jpg" width="128" height="128" border="0"></a></td>
-		            <td><a href="#"><img src="10.jpg" width="128" height="128" border="0"></a></td>
-		          </tr>
-		        </table>
-		    </td>
-		    <td id="demo2" valign="top"></td>
-		  </tr>
-		  </table>
-		</div>
-		<script>
-		var speed=30
-		demo2.innerHTML=demo1.innerHTML
-		function Marquee(){
-		if(demo2.offsetWidth-demo.scrollLeft<=0)
-		demo.scrollLeft-=demo1.offsetWidth
-		else{
-		demo.scrollLeft++
-		}
-		}
-		var MyMar=setInterval(Marquee,speed)
-		demo.οnmοuseοver=function() {clearInterval(MyMar);}
-		demo.οnmοuseοut=function() {MyMar=setInterval(Marquee,speed);}
-		 
-		 function bigger(){
-		  img.style.width = '400px';
-		  img.style.height = '400px';
-		 }
-		 
-		 function smaller(){
-		  img.style.width = '100px';
-		  img.style.height = '100px';
-		 }
-		 
-		</script>
-
-
-
-
-
-
-
-
-	
-	
-<nav class="shell">
-			<ul class="buttons">
-				<li class="li">
-					shop
-					<ul>
-						<li url="https://baike.baidu.com/item/%E8%8A%B1%E6%9E%9D%E9%BC%A0/7209013?fr=aladdin">Fancy Rat</li>
-						<li url="https://baike.baidu.com/item/%E4%BB%93%E9%BC%A0%E4%BA%9A%E7%A7%91/650631?fromtitle=%E4%BB%93%E9%BC%A0&fromid=8363">
-							Hamster</li>
-						<li url="https://www.taobao.com">taobao</li>
-						<li url="">Management</li>
-					</ul>
+	<head>
+		<meta charset="utf-8" />
+		<link rel="stylesheet" href="css/index.css" />
+		<title>THALL</title>
+	</head>
+	<body>
+		<div class="header">
+			<h1 class="lighting">Reach Higher Level</h1>
+			<ul class="head">
+				<li>
+					<div class="file">当前网页</div>
 				</li>
-				
-				<li class="li">
-					politics
-					<ul>
-						<li url="https://www.ssydt.com">时事一点通</li>
-						<li url="https://www.offcn.com/shizheng">中公教育</li>
-						<li>stock</li>
-						<li>nail</li>
-						<li>return goods</li>
-					</ul>
-				</li>
-				
-				<li class="li">
-					treasure
-					<ul>
-						<li>Relese baby</li>
-						<li>Posting Details</li>
-						<li>Shop decoration</li>
-					</ul>
-				</li>
-				
-				<li class="li">
-					financial service
-					<ul>
-						<li>payment</li>
-						<li>Loan goods</li>
-						<li>Collection in advance</li>
-					</ul>
+				<li>
+					<div class="contact">微信公众号</div>
 				</li>
 			</ul>
-		</nav>
-
-
-
-
-
-
-
-
-
-<div class="tabBox" id="tabBox">
-        <!-- 上面三个tab签 -->
-	<ul>
-		<li class="active">仓鼠</li>
-		<li>花枝鼠</li>
-		<li>弹奏视频</li>
-		<li>链接</li>
-		<li>游戏</li>
-        </ul>
-          <!-- tab对应切换的内容 -->
-	<div class="active">
-		<a href="https://baike.baidu.com/item/%E4%BB%93%E9%BC%A0%E4%BA%9A%E7%A7%91/650631?fromtitle=%E4%BB%93%E9%BC%A0&fromid=8363">仓鼠（hamster）</a>
-	</div>
-        <div>
-		<a href="https://baike.baidu.com/item/%E8%8A%B1%E6%9E%9D%E9%BC%A0/7209013?fr=aladdin">花枝鼠（fancy rat）</a>
-	</div>
-	<div>
-		<a href="https://THALL1634.github.io/同桌的你.html">同桌的你</a>
-		<a href="https://THALL1634.github.io/魔法城堡.html">魔法城堡</a>
-		<a href="https://THALL1634.github.io/微微一笑很倾城.html">微微一笑很倾城</a>
-		<a href="https://THALL1634.github.io/刚好遇见你.html">刚好遇见你</a>
-	</div>
-	<div>
-		<a href="https://fb25385471.m.jzfkw.cn/">我的网址</a>
-	</div>
-	<div>
-		<a href="https://THALL1634.github.io/FIR.html">五子棋</a>&nbsp;&nbsp;
-		<a href="https://thall1634.github.io/Chinese%20chess/chess.html">中国象棋</a>&nbsp;&nbsp;
-		<a href="https://thall1634.github.io/FruitNinja/index.html">水果忍者</a>&nbsp;&nbsp;
-		<a href="https://thall1634.github.io/%E8%B4%AA%E5%90%83%E8%9B%87/%E8%B4%AA%E5%90%83%E8%9B%87.html">贪吃蛇</a>
-	</div>
-</div>
-
-
-
-
-
-
-
-
-
-
-	<br /><br /><br /><br /><br />
-
-
-	
-	
-	
-	
-	
-	
-	<div style="position: absolute;top: 780px;right: 0px;">
-				<button onclick="myFunc()"style="font-size: 50px;">访问另一个网址</button>
-				  
-				<!--重定向到其他网页的脚本-->   
-				<script> 
-				   function myFunc() { 
-				     window.location.href="https://fb25385471.jz.fkw.com/"; 
-				   } 
-				</script>
+		</div>
+		<ul class="content">
+			<li>
+				<ul class="file-content">
+					<li>
+						<img src="img/webpage.jpg" />
+					</li>
+				</ul>
+			</li>
+			<li>
+				<ul class="contacts">
+					<li>
+						<img src="img/wechat.jpg" />
+					</li>
+				</ul>
+			</li>
+		</ul>
+		<!-- 顶部横向导航栏结束 -->
+		
+		<div class="tabBox" id="tabBox">
+			<!-- 上面三个tab签 -->
+			<ul>
+				<li class="active">仓鼠</li>
+				<li>花枝鼠</li>
+				<li>弹奏视频</li>
+				<li>链接</li>
+				<li>游戏</li>
+			</ul>
+			<!-- tab对应切换的内容 -->
+			<div class="active">
+				<a
+					href="https://baike.baidu.com/item/%E4%BB%93%E9%BC%A0%E4%BA%9A%E7%A7%91/650631?fromtitle=%E4%BB%93%E9%BC%A0&fromid=8363">仓鼠（hamster）</a>
 			</div>
-	
-	
-	<hr width="80%" style="position: absolute;top: 1100px;"/>
-	<br /><br />
-	
-	
-	
-	
-	<h1 style="position: absolute;top: 1100px;left:600px;font: bold 35px/60px Helvetica, Arial, Sans-serif;color: #eee;
-	text-shadow: 0px 2px 6px #333;">Pictuer of Hamster</h1>
-	<hr width="100%"color="red"style="position: absolute;top: 1190px;" />
-	<a href="小鼠那些事.pptx" style="position:absolute;top:1170px;left:750px;">点击下载ppt</a>
-	<div>
-		<div id="images">
-		    <img id="image1" src="mouse/hamster/h15.jpg" />
-		    <img id="image2" src="mouse/hamster/h9.jpg" />
-		    <img id="image3" src="mouse/hamster/h2.jpg" />
-		    <img id="image4" src="mouse/hamster/h13.jpg" />
-		    <img id="image5" src="mouse/hamster/h14.jpg" />
-			<img id="image6" src="mouse/hamster/h3.jpg" />
-			<img id="image7" src="mouse/hamster/h12.jpg" />
-			<img id="image8" src="mouse/hamster/h11.jpg" />
+			<div>
+				<a href="https://baike.baidu.com/item/%E8%8A%B1%E6%9E%9D%E9%BC%A0/7209013?fr=aladdin">花枝鼠（fancy
+					rat）</a>
+			</div>
+			<div>
+				<a href="https://THALL1634.github.io/同桌的你.html">同桌的你</a>
+				<a href="https://THALL1634.github.io/魔法城堡.html">魔法城堡</a>
+				<a href="https://THALL1634.github.io/微微一笑很倾城.html">微微一笑很倾城</a>
+				<a href="https://THALL1634.github.io/刚好遇见你.html">刚好遇见你</a>
+			</div>
+			<div>
+				<a href="https://fb25385471.m.jzfkw.cn/">我的网址</a>
+			</div>
+			<div>
+				<a href="https://THALL1634.github.io/FIR.html">五子棋</a>&nbsp;&nbsp;
+				<a href="https://thall1634.github.io/Chinese%20chess/chess.html">中国象棋</a>&nbsp;&nbsp;
+				<a href="https://thall1634.github.io/FruitNinja/index.html">水果忍者</a>&nbsp;&nbsp;
+				<a
+					href="https://thall1634.github.io/%E8%B4%AA%E5%90%83%E8%9B%87/%E8%B4%AA%E5%90%83%E8%9B%87.html">贪吃蛇</a>
+			</div>
 		</div>
-		<div id="slider">
-		    <a href="#image1">1</a>
-		    <a href="#image2">2</a>
-		    <a href="#image3">3</a>
-		    <a href="#image4">4</a>
-	        <a href="#image5">5</a>
-			<a href="#image6">6</a>
-			<a href="#image7">7</a>
-			<a href="#image8">8</a>
-		</div>
-		
-		
-		
-		<div id="images1">
-		    <img id="image1+" src="mouse/hamster/Golden hamster/h11.jpg" />
-		    <img id="image2+" src="mouse/hamster/Golden hamster/h1.png" />
-		    <img id="image3+" src="mouse/hamster/Golden hamster/h4.png" />
-		    <img id="image4+" src="mouse/hamster/Golden hamster/h6.jpg" />
-		    <img id="image5+" src="mouse/hamster/Golden hamster/h9.jpg" />
-			<img id="image6+" src="mouse/hamster/Golden hamster/h1.jpg" />
-			<img id="image7+" src="mouse/hamster/Golden hamster/h2.jpg" />
-			<img id="image8+" src="mouse/hamster/Golden hamster/h10.jpg" />
-		</div>
-		<div id="slider1">
-		    <a href="#image1+">1</a>
-		    <a href="#image2+">2</a>
-		    <a href="#image3+">3</a>
-		    <a href="#image4+">4</a>
-		    <a href="#image5+">5</a>
-			<a href="#image6+">6</a>
-			<a href="#image7+">7</a>
-			<a href="#image8+">8</a>
-		</div>
-		
-		
-		
-	</div>
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	<br /><br />
-	<hr style="position: absolute;top: 1950px;"color="red"width="100%"/>
-	
-	
-	
-
-     <script>2
-        //   思路： 1.给所有的ul绑定点击事件，当点击任何一个li的时候，都做第二步操作
-        //         2.可以先让所有的li && div的class都为空（xxx.className=''）, 再让当前点击的这个li和对应的div有className这个样式类即可
-        //获取id为tabBox的所有li和div
-        var tabBox = document.getElementById('tabBox');
-        var tabList = tabBox.getElementsByTagName('li');
-        var divList = tabBox.getElementsByTagName('div');
-        //重复操作用循环
-    //=>自定义属性方式
-        // for (var i = 0; i < tabList.length; i++) {
-        //     //=>每一轮循环的时候，给每一个li设置一个自定义属性‘zzzz’,存储的值是各自的索引
-        //     //  TAB-List
-        //     //   {
-        //     //       0:{zzzIndex:0,...},
-        //     //       1:{zzzIndex:1,...},
-        //     //       2:{zzzIndex:2,...},
-        //     //       length:3
-        //     //   }
-        //     tabList[i]['zfIndex'] = i ;
-        //     console.dir(tabList[i]);
-        //     tabList[i].onclick = function() {
-        //         //this:代表的是当前点击的这个li
-        //         changeTab(this.zfIndex); //=>需要索引
-        //     }
-        // }
-      //=>第二种方式将var改为lei
-        // for (let i = 0; i < tabList.length; i++) {
-        //     tabList[i].onclick = function() {
-        //         changeTab(i);
-        //     }
-        // }
-      //=>第三种方式在tabList外层在包一个function
-    //   for (var i = 0; i < tabList.length; i++) {
-    //       ~function (i) {
-    //         tabList[i].onclick = function() {
-    //             changeTab(i);
-    //         }
-    //     } (i);
-    //     }
-     //=>第四种方式在tabList外层在包一个function
-     for (var i = 0; i < tabList.length; i++) { 
-            tabList[i].onclick = function(i) {
-                return function (){
-                    changeTab(i);
-                }
-        } (i);
-        }
-    //*不行的代码
-        // for (var i = 0; i < tabList.length; i++) {
-        //      // tabList[i] 每一轮循环当前要操作的li对象，i是变量索引
-        //      tabList[i].onclick = function() {
-        //          //=>给当前元素某一个事件绑定一个方法，绑定的时候方法没有执行（属于创建）当在页面中手动触发点击事件的时候绑定的方法就会执行
-        //         //  i=0 tabList[0].onclick=function..
-        //         //  i=1 tabList[1].onclick=function...
-        //         //  i=2 tabList[2].onclick=function...
-        //         alert(i);
-        //         changeTab(i);//=>需要把当前点击的这个li的索引传递进来
-        //         //分析：第一次循环
-        //         // i=0 tabList[0].onclick = function (){
-        //         //    "changeTab(i);"
-        //         // };
-        //         // i++ 第二次循环
-        //         // i=1 i=0 tabList[1].onclick = function (){
-        //         //    "changeTab(i);"
-        //         // };
-        //         // i++ 第三次循环
-        //         // i=2 i=0 tabList[2].onclick = function (){
-        //         //    "changeTab(i);"
-        //         // };
-        //         // i++
-        //         // i=3 循环结束
-        //      }
-            
-        // }
-
-
-        //=>第二中不用循环的方法
-        // tabList[0].onclick = function (){
-        //     changeTab(0);
-        // }
-        // tabList[1].onclick = function (){
-        //     changeTab(1);
-        // }
-        // tabList[2].onclick = function (){
-        //     changeTab(2);
-        // }
-        //=>封装一个方法完成页卡切换
-        function changeTab(n){
-            //=>n:形参变量，当执行这个方法的时候，会把当前点击的这个li的索引传递过来
-
-            //=>1.清空所有选中样式
-            for (var i = 0 ; i < tabList.length; i++){
-                tabList[i].className = '';
-                divList[i].className = '';
-            }
-            //=>2.当前点击的有选中样式
-            tabList[n].className='active';
-            divList[n].className='active';
-        }
-        // 思考：
-        //    1.思考n多种实现选项卡的思路
-        //    2.隔行变色实现三行变色，并且基于js实现鼠标滑过高亮显示，鼠标离开回归原有样式
-      </script>
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	<script>
-	function xx()
-	{
-		var oxt=document.getElementById("xt");
-		var odiv=document.getElementById("div1");
-		
-		
-		if(odiv.style.display=="none")
-		{
-			odiv.style.display="block";
-			oxt.value="隐藏";
-		}
-		else
-		{
-			odiv.style.display="none";
-			oxt.value="图一"
-		}
-	}
-	
-	function yy()
-	{
-		var oyt=document.getElementById("yt");
-		var odiv=document.getElementById("div2");
-		
-		
-		if(odiv.style.display=="none")
-		{
-			odiv.style.display="block";
-			oyt.value="隐藏";
-		}
-		else
-		{
-			odiv.style.display="none";
-			oyt.value="图二"
-		}
-	}
-	
-	function zz()
-	{
-		var ozt=document.getElementById("zt");
-		var odiv=document.getElementById("div3");
-		
-		
-		if(odiv.style.display=="none")
-		{
-			odiv.style.display="block";
-			ozt.value="隐藏";
-		}
-		else
-		{
-			odiv.style.display="none";
-			ozt.value="图三"
-		}
-	}
-	
-	function ww()
-	{
-		var owt=document.getElementById("wt");
-		var odiv=document.getElementById("div4");
-		
-		
-		if(odiv.style.display=="none")
-		{
-			odiv.style.display="block";
-			owt.value="隐藏";
-		}
-		else
-		{
-			odiv.style.display="none";
-			owt.value="图四"
-		}
-	}
-	</script>
-	<input type="button" id="xt" value="图一"  onclick="xx()" style="position: absolute;top: 2000px;left: 50px;"/>
-	<div id="div1" ></div>
-	
-	<input type="button" id="yt" value="图二"  onclick="yy()" style="position: absolute;top: 2000px;left: 500px;"/>
-	<div id="div2" ></div>
-	
-	<input type="button" id="zt" value="图三"  onclick="zz()" style="position: absolute;top: 2000px;left: 950px;"/>
-	<div id="div3" ></div>
-	
-	<input type="button" id="wt" value="图四"  onclick="ww()" style="position: absolute;top: 2000px;left: 1400px;"/>
-	<div id="div4" ></div>
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	<hr width="85%" color="mediumpurple" style="position: absolute;top: 2895px;" />
-	<div class="box">
-		    <div class="left">
-		        <ul>
-		            <li class="menu">
-		                <span>信息</span>
-		                <ul class="show">
-		                    <li url="https://baike.baidu.com/item/%E8%8A%B1%E6%9E%9D%E9%BC%A0/7209013?fr=aladdin">花枝鼠</li>
-		                    <li url="https://baike.baidu.com/item/%E4%BB%93%E9%BC%A0%E4%BA%9A%E7%A7%91/650631?fromtitle=%E4%BB%93%E9%BC%A0&fromid=8363">仓鼠</li>
-		                    <li url="https://www.taobao.com">淘宝网</li>
-		                    <li url="https://www.baidu.com">百度</li>
-				    <li>贴吧</li>
-		                </ul>
-		            </li>
-		            <li class="menu">
-		                <span>政治</span>
-		                <ul class="hide">
-		                    <li url="https://www.ssydt.com/">时事一点通</li>
-		                    <li url="https://www.offcn.com/shizheng">中公教育</li>
-		                </ul>
-		            </li>
-		            <li class="menu">
-		                <span>经济</span>
-		                <ul class="hide">
-		                    <li>二级菜单</li>
-		                    <li>二级菜单</li>
-		                    <li>二级菜单</li>
-		                    <li>二级菜单</li>
-		                </ul>
-		            </li>
-		            <li class="menu">
-		                <span>科技</span>
-		                <ul class="hide">
-		                    <li>二级菜单</li>
-		                    <li>二级菜单</li>
-		                    <li>二级菜单</li>
-		                    <li>二级菜单</li>
-		                </ul>
-		            </li>
-		        </ul>
-		    </div>
-		    <div class="right">
-		        <iframe src="http://www.baidu.com" frameborder="0"></iframe>
-		    </div>
-		</div>
-		
 		<script>
-		    let spans = document.querySelectorAll('span')
-		    let menus = document.querySelectorAll('.menu>ul')
-		    let lis = document.querySelectorAll('.menu ul li')
-		    let iframe = document.querySelector('iframe')
-		    for (let i = 0; i < spans.length; i++) {
-		        spans[i].onclick = function () {
-		            let className = menus[i].getAttribute('class')
-		            // console.log(className)
-		            if (className === 'show') {
-		                menus[i].setAttribute('class', 'hide')
-		            } else {
-		                menus[i].setAttribute('class', 'show')
-		            }
-		        }
-		    }
+			2
+			//   思路： 1.给所有的ul绑定点击事件，当点击任何一个li的时候，都做第二步操作
+			//         2.可以先让所有的li && div的class都为空（xxx.className=''）, 再让当前点击的这个li和对应的div有className这个样式类即可
+			//获取id为tabBox的所有li和div
+			var tabBox = document.getElementById('tabBox');
+			var tabList = tabBox.getElementsByTagName('li');
+			var divList = tabBox.getElementsByTagName('div');
+			//重复操作用循环
+			//=>自定义属性方式
+			// for (var i = 0; i < tabList.length; i++) {
+			//     //=>每一轮循环的时候，给每一个li设置一个自定义属性‘zzzz’,存储的值是各自的索引
+			//     //  TAB-List
+			//     //   {
+			//     //       0:{zzzIndex:0,...},
+			//     //       1:{zzzIndex:1,...},
+			//     //       2:{zzzIndex:2,...},
+			//     //       length:3
+			//     //   }
+			//     tabList[i]['zfIndex'] = i ;
+			//     console.dir(tabList[i]);
+			//     tabList[i].onclick = function() {
+			//         //this:代表的是当前点击的这个li
+			//         changeTab(this.zfIndex); //=>需要索引
+			//     }
+			// }
+			//=>第二种方式将var改为lei
+			// for (let i = 0; i < tabList.length; i++) {
+			//     tabList[i].onclick = function() {
+			//         changeTab(i);
+			//     }
+			// }
+			//=>第三种方式在tabList外层在包一个function
+			//   for (var i = 0; i < tabList.length; i++) {
+			//       ~function (i) {
+			//         tabList[i].onclick = function() {
+			//             changeTab(i);
+			//         }
+			//     } (i);
+			//     }
+			//=>第四种方式在tabList外层在包一个function
+			for (var i = 0; i < tabList.length; i++) {
+				tabList[i].onmouseenter = function(i) {
+					return function() {
+						changeTab(i);
+					}
+				}(i);
+			}
+			//*不行的代码
+			// for (var i = 0; i < tabList.length; i++) {
+			//      // tabList[i] 每一轮循环当前要操作的li对象，i是变量索引
+			//      tabList[i].onclick = function() {
+			//          //=>给当前元素某一个事件绑定一个方法，绑定的时候方法没有执行（属于创建）当在页面中手动触发点击事件的时候绑定的方法就会执行
+			//         //  i=0 tabList[0].onclick=function..
+			//         //  i=1 tabList[1].onclick=function...
+			//         //  i=2 tabList[2].onclick=function...
+			//         alert(i);
+			//         changeTab(i);//=>需要把当前点击的这个li的索引传递进来
+			//         //分析：第一次循环
+			//         // i=0 tabList[0].onclick = function (){
+			//         //    "changeTab(i);"
+			//         // };
+			//         // i++ 第二次循环
+			//         // i=1 i=0 tabList[1].onclick = function (){
+			//         //    "changeTab(i);"
+			//         // };
+			//         // i++ 第三次循环
+			//         // i=2 i=0 tabList[2].onclick = function (){
+			//         //    "changeTab(i);"
+			//         // };
+			//         // i++
+			//         // i=3 循环结束
+			//      }
 		
-		    for (let i = 0; i < lis.length; i++) {
-		        lis[i].onclick = function () {
-		            for (let j = 0; j < lis.length; j++) {
-		                lis[j].removeAttribute('class', 'dot')
-		            }
-		            iframe.setAttribute('src', lis[i].getAttribute('url'))
-		            this.setAttribute('class', 'dot')
-		        }
-		    }
+			// }
+		
+		
+			//=>第二中不用循环的方法
+			// tabList[0].onclick = function (){
+			//     changeTab(0);
+			// }
+			// tabList[1].onclick = function (){
+			//     changeTab(1);
+			// }
+			// tabList[2].onclick = function (){
+			//     changeTab(2);
+			// }
+			//=>封装一个方法完成页卡切换
+			function changeTab(n) {
+				//=>n:形参变量，当执行这个方法的时候，会把当前点击的这个li的索引传递过来
+		
+				//=>1.清空所有选中样式
+				for (var i = 0; i < tabList.length; i++) {
+					tabList[i].className = '';
+					divList[i].className = '';
+				}
+				//=>2.当前点击的有选中样式
+				tabList[n].className = 'active';
+				divList[n].className = 'active';
+			}
+			// 思考：
+			//    1.思考n多种实现选项卡的思路
+			//    2.隔行变色实现三行变色，并且基于js实现鼠标滑过高亮显示，鼠标离开回归原有样式
 		</script>
-
-
-		<br/><br /><br/><br /><br/><br/><br /><br/><br /><br/>
-		<hr width="70%"style="position: absolute;top: 3750px;"color="wheat" />
-	
-	
-	
-	
-	
-
-
-
-<div style="position: absolute;top: 3900px;left: 600px;">
-	<h1 style="color: chartreuse;text-align: left;">扫码前往我的另一个网址</h1><br />
-	<center><img  src="fb25385471.m.jzfkw.cn.png"/></center>
-</div><br /><br /><br />
-<div align="top"style="position: absolute;top:4400px;left: 630px;">
-			<script>
-			   function check(){
-			      var name=document.getElementById("name").value;
-			   var pass=document.getElementById("pass").value;
-			   if(name=="tomorrow" && pass=="5201314time"){
-			   alert("进入成功");
-			   window.location.href="first.html";
-			   }
-			   else if(name=="同桌的你"&&pass=="5211314"){
-				   alert("进入成功");
-				   window.location.href="同桌的你.html";
-			   }
-			   else if(name=="魔法城堡"&&pass=="child and memory"){
-			   				   alert("进入成功");
-			   				   window.location.href="魔法城堡.html";
-			   }
-			   else if(name=="微微一笑很倾城"&&pass=="slight smile"){
-			   				   alert("进入成功");
-			   				   window.location.href="微微一笑很倾城.html";
-			   }
-			   else if(name=="刚好遇见你"&&pass=="not forget"){
-			   				   alert("进入成功");
-			   				   window.location.href="刚好遇见你.html";
-			   }
-			   else{
-			   alert("曲目没有或密钥错误");
-			   window.document.f.action="https://www.baidu.com/?tn=18029102_3_dg";
-			   window.document.f.submit();
-			   }
-			   
-			   }
-			</script>
-			
-			<form name="f" action=""style="font-size: 35px;">
-			<center style="color: deepskyblue;">演奏视频</center>
-			<center>曲目:<INPUT TYPE="text" NAME="" id="name"><br></center>
-			<center>密钥:<INPUT TYPE="password" NAME="" id="pass"><br></center>
-			<center><INPUT TYPE="button" value="浏览" onclick="check()">
-			<INPUT TYPE="reset" value="重置"></center>
-			</form>
-		</div>
-</body>
+	</body>
 </html>
