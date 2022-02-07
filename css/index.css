@@ -1,0 +1,170 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+
+a{
+	text-decoration: none;
+	color: white;
+}
+
+li {
+	list-style: none;
+}
+
+.header {
+	height: 40px;
+	background-color: #000000;
+	position: relative;
+}
+
+body {
+	/* background: #e3e3e3 url(../img/漂流瓶.jpg)  no-repeat fixed ; */
+	background-color: #e3e3e3;
+	background-image: url(../img/漂流瓶.jpg);
+	background-repeat: no-repeat;
+	background-size: 1520px 700px;
+	background-position: 0px 40px;
+}
+
+.lighting {
+	float: left;
+	height: 40px;
+	line-height: 40px;
+	font-size: 30px;
+	font-weight: 900;
+	font-family: "Snap ITC";
+	color: rgba(255, 255, 255, 0);
+	position: relative;
+}
+
+.lighting::before {
+	position: absolute;
+	content: "\Reach Higher Level";
+	color: transparent;
+	background-image: linear-gradient(to right, #ff0000, #3fb400, #ff17e8, #8fff49, #ea4ca6);
+	-webkit-background-clip: text;
+	clip-path: polygon(-30% 0%, 0% 0%, -10% 100%, -40% 100%);
+	animation: light 5s 2s infinite;
+}
+
+@keyframes light {
+	0% {
+		clip-path: polygon(-30% 0%, 0% 0%, -10% 100%, -40% 100%);
+	}
+
+	50% {
+		clip-path: polygon(100% 0%, 130% 0%, 110% 100%, 80% 100%);
+	}
+
+	100% {
+		clip-path: polygon(-30% 0%, 0% 0%, -10% 100%, -40% 100%);
+	}
+}
+
+.head {
+	float: left;
+	margin-left: 150px;
+	height: 40px;
+	overflow: visible;
+
+}
+
+.head li {
+	float: left;
+	margin-left: 200px;
+	color: white;
+}
+
+.file,
+.contact {
+	font: 25px 华文行楷;
+	line-height: 40px;
+	border-left: 2px solid white;
+	border-right: 2px solid white;
+	padding: 0 30px 0 30px;
+}
+
+
+.content {
+	position: absolute;
+	float: left;
+	color: white;
+	margin-left: 681px;
+	visibility: hidden;
+}
+
+.content li {
+	float: left;
+}
+
+.file-content {
+	height: 40px;
+	width: 164px;
+}
+
+.file-content li {
+	border: 3px solid #dddd99;
+	border-top: 0;
+	background-color: rgba(0,0,0,.3);
+}
+
+.file-content li img{
+	width: 160px;
+	height: 120px;
+}
+
+.contacts{
+	width: 189px;
+	height: 189px;
+	margin-left: 200px;
+}
+
+.contacts img{
+	width: 100%;
+}
+
+/* hover改变同级元素样式，需要改变样式的元素，class名或id名前要加上一个+号 */
+.header:hover +.content{
+	visibility: visible;
+}
+
+.tabBox {
+	background-color: rgba(0,0,0,.3);
+	height: 500px;
+}
+
+.tabBox ul {
+	float: left;
+	width: 200px;
+	margin-left: 200px;
+	margin-top: 50px;
+	background-color: rgba(255,255,255,.3);
+	/* 相对于之前的位置向下移动1px,使边框重合 */
+}
+
+.tabBox ul li {
+	/* 同一行，块标签 */
+	padding: 0 40px;
+	line-height: 80px;
+	cursor: pointer;
+}
+
+.tabBox ul li.active {
+	color: red;
+	font-weight: bold;
+	background-color: rgba(105,56,101,.6);
+	/* 当前li的边框覆盖率div的边框，我们让li的下边框为背景颜色白色，这样看上去就像没边框 */
+}
+
+.tabBox div {
+	display: none;
+	line-height: 450px;
+	text-align: center;
+	border: 1px solid #AAA;
+}
+
+.tabBox div.active {
+	display: block;
+	/* div .active加空格是后代筛选，先搜索div在div中筛选，div .active不加空格当前div标签的二次筛选，同级筛选 */
+}
