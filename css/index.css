@@ -3,13 +3,23 @@
 	margin: 0;
 }
 
-audio {
+audio{
 	display: none;
 }
 
 a{
 	text-decoration: none;
 	color: white;
+}
+
+a:hover{
+	text-decoration: underline;
+	color: #ff8ba4;
+	font-weight: bold;
+}
+
+a:active{
+	color: #5a7fa7;
 }
 
 li {
@@ -29,6 +39,7 @@ body {
 	background-repeat: no-repeat;
 	background-size: 1520px 700px;
 	background-position: 0px 40px;
+	background-attachment: fixed;
 }
 
 .lighting {
@@ -126,6 +137,7 @@ body {
 
 .contacts img{
 	width: 100%;
+	border: 1px solid #7bdd82;
 }
 
 /* hover改变同级元素样式，需要改变样式的元素，class名或id名前要加上一个+号 */
@@ -135,35 +147,43 @@ body {
 
 .tabBox {
 	background-color: rgba(0,0,0,.3);
-	height: 500px;
+	height: 900px;
 }
 
 .tabBox ul {
 	float: left;
-	width: 200px;
-	margin-left: 200px;
+	width: 400px;
+	margin-left: 100px;
 	margin-top: 50px;
+	font: 30px 华文彩云;
 	background-color: rgba(255,255,255,.3);
+	
 	/* 相对于之前的位置向下移动1px,使边框重合 */
 }
 
 .tabBox ul li {
 	/* 同一行，块标签 */
-	padding: 0 40px;
-	line-height: 80px;
+	padding: 40px 40px;
+	/* line-height: 80px; */
+	
 	cursor: pointer;
+	border-radius: 20px;
 }
 
 .tabBox ul li.active {
-	color: red;
-	font-weight: bold;
+	color: #97bbea;
+	/* font-weight: bold; */
+	font-family: 华文琥珀;
 	background-color: rgba(105,56,101,.6);
 	/* 当前li的边框覆盖率div的边框，我们让li的下边框为背景颜色白色，这样看上去就像没边框 */
 }
 
 .tabBox div {
 	display: none;
-	line-height: 450px;
+	margin-left: 500px;
+	height: 602.8px;
+	font: 40px 楷体;
+	line-height: 600px;
 	text-align: center;
 	border: 1px solid #AAA;
 }
@@ -171,4 +191,55 @@ body {
 .tabBox div.active {
 	display: block;
 	/* div .active加空格是后代筛选，先搜索div在div中筛选，div .active不加空格当前div标签的二次筛选，同级筛选 */
+}
+
+.tabBox div a{
+	display: inline-block;
+}
+
+#game{
+	position: relative;
+}
+
+#game img{
+	position: absolute;
+	opacity: 80%;
+	top: 50px;
+	left: 0;
+	z-index: -1;
+	height: 552.8px;
+	width: 1000px;
+}
+
+#communication img{
+	border: 1px dashed transparent;
+	padding-top: 50px;
+}
+
+#scenery{
+	position: relative;
+}
+
+#scenery img{
+	position: absolute;
+	opacity: 80%;
+	top: 50px;
+	left: 0;
+	z-index: -1;
+	height: 552.8px;
+	width: 1000px;
+}
+
+#note{
+	position: relative;
+}
+
+#note img{
+	position: absolute;
+	opacity: 80%;
+	top: 50px;
+	left: 0;
+	z-index: -1;
+	height: 552.8px;
+	width: 1000px;
 }
