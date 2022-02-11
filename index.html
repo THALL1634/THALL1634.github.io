@@ -6,8 +6,7 @@
 		<title>THALL</title>
 	</head>
 	<body>
-		<audio autoplay="autoplay" controls="controls" loop="loop" preload="auto" src="王雨笙 - Canon (八音盒).mp3">
-			</audio>
+		<audio controls="controls" loop="loop" preload="auto" src="img/许嵩-幻听.mp3"></audio>
 		<div class="header">
 			<h1 class="lighting">Reach Higher Level</h1>
 			<ul class="head">
@@ -40,38 +39,43 @@
 		<div class="tabBox" id="tabBox">
 			<!-- 上面三个tab签 -->
 			<ul>
-				<li class="active">仓鼠</li>
-				<li>花枝鼠</li>
-				<li>弹奏视频</li>
-				<li>链接</li>
-				<li>游戏</li>
+				<li class="active">游戏*game</li>
+				<li>风景*scenery</li>
+				<li>演奏*music</li>
+				<li>文件*file</li>
+				<li>交流*communication</li>
 			</ul>
 			<!-- tab对应切换的内容 -->
-			<div class="active">
-				<a
-					href="https://baike.baidu.com/item/%E4%BB%93%E9%BC%A0%E4%BA%9A%E7%A7%91/650631?fromtitle=%E4%BB%93%E9%BC%A0&fromid=8363">仓鼠（hamster）</a>
-			</div>
-			<div>
-				<a href="https://baike.baidu.com/item/%E8%8A%B1%E6%9E%9D%E9%BC%A0/7209013?fr=aladdin">花枝鼠（fancy
-					rat）</a>
-			</div>
-			<div>
-				<a href="https://THALL1634.github.io/同桌的你.html">同桌的你</a>
-				<a href="https://THALL1634.github.io/魔法城堡.html">魔法城堡</a>
-				<a href="https://THALL1634.github.io/微微一笑很倾城.html">微微一笑很倾城</a>
-				<a href="https://THALL1634.github.io/刚好遇见你.html">刚好遇见你</a>
-			</div>
-			<div>
-				<a href="https://fb25385471.m.jzfkw.cn/">我的网址</a>
-			</div>
-			<div>
+			<div class="active" id="game">
 				<a href="https://THALL1634.github.io/FIR.html">五子棋</a>&nbsp;&nbsp;
 				<a href="https://thall1634.github.io/Chinese%20chess/chess.html">中国象棋</a>&nbsp;&nbsp;
 				<a href="https://thall1634.github.io/FruitNinja/index.html">水果忍者</a>&nbsp;&nbsp;
 				<a
 					href="https://thall1634.github.io/%E8%B4%AA%E5%90%83%E8%9B%87/%E8%B4%AA%E5%90%83%E8%9B%87.html">贪吃蛇</a>
+				<img src="img/巫妖王.jpg" />
+			</div>
+			<div id="scenery">
+				<a href="img/厦门风光.jpg" target="_blank">厦门</a>
+				<a href="img/锦溪景致.jpg" target="_blank">锦溪</a>
+				<img src="img/scenery.jpg" alt="scenery">
+			</div>
+			<div id="note">
+				<a href="https://THALL1634.github.io/同桌的你.html">同桌的你</a>
+				<a href="https://THALL1634.github.io/魔法城堡.html">魔法城堡</a>
+				<a href="https://THALL1634.github.io/微微一笑很倾城.html">微微一笑很倾城</a>
+				<a href="https://THALL1634.github.io/刚好遇见你.html">刚好遇见你</a>
+				<img src="img/note.jpg" alt="note">
+			</div>
+			<div id="file">
+				<a href="中国和国际表全年节日列.doc">节日大全（word）</a>
+				<a href="小鼠那些事.pptx">仓鼠和花枝鼠（ppt）</a>
+			</div>
+			<div id="communication">
+				<img src="./img/wechat%20group.jpg" alt="微信群聊，相互联系">
 			</div>
 		</div>
+		
+		
 		<script>
 			2
 			//   思路： 1.给所有的ul绑定点击事件，当点击任何一个li的时候，都做第二步操作
