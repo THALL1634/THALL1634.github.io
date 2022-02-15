@@ -40,6 +40,7 @@ body {
 	background-size: 1520px 700px;
 	background-position: 0px 40px;
 	background-attachment: fixed;
+	height: 20000px;
 }
 
 .lighting {
@@ -242,4 +243,61 @@ body {
 	z-index: -1;
 	height: 552.8px;
 	width: 1000px;
+}
+
+.introduce{
+	background-color: rgba(185,175,185,.6);
+	float: left;
+	margin-left: 200px;
+	width: 1000px;
+	height: 10000px;
+}
+
+.nav{
+	position: sticky;
+	top: 300px;
+}
+
+.nav li{
+	
+}
+
+.nav li a{
+	background-color: #ffffff;
+	color: #828282;
+	font: 50px 楷体;
+	border: 2px solid black;
+}
+
+.nav li a:hover{
+	background-color: #ffeec2;
+	color: #ff6363;
+}
+
+h1{
+	text-align: left;
+}
+
+p{
+	text-indent: 2em;
+}
+
+h3{
+	margin: 100px 50px;
+}
+
+#igame{
+	margin-top: 200px;
+}
+
+#iscenery{
+	margin-top: 200px;
+}
+
+#imusic{
+	margin-top: 200px;
+}
+
+#ifile{
+	margin-top: 200px;
 }
