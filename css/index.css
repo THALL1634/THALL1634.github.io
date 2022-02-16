@@ -41,6 +41,7 @@ body {
 	background-position: 0px 40px;
 	background-attachment: fixed;
 	height: 20000px;
+	width: 2000px;
 }
 
 .lighting {
@@ -182,10 +183,11 @@ body {
 .tabBox div {
 	display: none;
 	margin-left: 500px;
+	padding-left: 150px;
 	height: 602.8px;
 	font: 40px 楷体;
 	line-height: 600px;
-	text-align: center;
+	/* text-align: center; */
 	border: 1px solid #AAA;
 }
 
@@ -209,7 +211,7 @@ body {
 	left: 0;
 	z-index: -1;
 	height: 552.8px;
-	width: 1000px;
+	width: 1100px;
 }
 
 #communication img{
@@ -219,6 +221,7 @@ body {
 
 #scenery{
 	position: relative;
+	padding-left: 400px;
 }
 
 #scenery img{
@@ -228,7 +231,7 @@ body {
 	left: 0;
 	z-index: -1;
 	height: 552.8px;
-	width: 1000px;
+	width: 1100px;
 }
 
 #note{
@@ -242,7 +245,7 @@ body {
 	left: 0;
 	z-index: -1;
 	height: 552.8px;
-	width: 1000px;
+	width: 1100px;
 }
 
 .introduce{
@@ -300,4 +303,16 @@ h3{
 
 #ifile{
 	margin-top: 200px;
+}
+
+.introduce p{
+	margin-top: 20px;
+	font: 22px 楷体;
+	font-weight: 600;
+	font-style: italic;
+}
+
+.introduce h1,
+.introduce h2{
+	margin-bottom: 40px;
 }
