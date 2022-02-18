@@ -3,22 +3,22 @@
 	margin: 0;
 }
 
-audio{
+audio {
 	display: none;
 }
 
-a{
+a {
 	text-decoration: none;
 	color: white;
 }
 
-a:hover{
+a:hover {
 	text-decoration: underline;
 	color: #ff8ba4;
 	font-weight: bold;
 }
 
-a:active{
+a:active {
 	color: #5a7fa7;
 }
 
@@ -42,6 +42,34 @@ body {
 	background-attachment: fixed;
 	height: 3700px;
 	width: 2000px;
+}
+
+.logo {
+	position: absolute;
+	left: 300px;
+	height: 40px;
+	animation: show_logo 2s ease-out 0s infinite forwards;
+}
+
+@keyframes show_logo {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+.logo svg {
+	height: 100%;
+}
+
+.logo span {
+	display: inline-block;
+	height: 20px;
+	color: rgba(255, 255, 255, .1);
+	vertical-align: bottom;
 }
 
 .lighting {
@@ -123,32 +151,32 @@ body {
 .file-content li {
 	border: 3px solid #dddd99;
 	border-top: 0;
-	background-color: rgba(0,0,0,.3);
+	background-color: rgba(0, 0, 0, .3);
 }
 
-.file-content li img{
+.file-content li img {
 	width: 160px;
 	height: 120px;
 }
 
-.contacts{
+.contacts {
 	width: 189px;
 	height: 189px;
 	margin-left: 200px;
 }
 
-.contacts img{
+.contacts img {
 	width: 100%;
 	border: 1px solid #7bdd82;
 }
 
 /* hover改变同级元素样式，需要改变样式的元素，class名或id名前要加上一个+号 */
-.header:hover +.content{
+.header:hover+.content {
 	visibility: visible;
 }
 
 .tabBox {
-	background-color: rgba(0,0,0,.3);
+	background-color: rgba(0, 0, 0, .3);
 	height: 900px;
 }
 
@@ -158,8 +186,8 @@ body {
 	margin-left: 100px;
 	margin-top: 50px;
 	font: 30px 华文彩云;
-	background-color: rgba(255,255,255,.3);
-	
+	background-color: rgba(255, 255, 255, .3);
+
 	/* 相对于之前的位置向下移动1px,使边框重合 */
 }
 
@@ -167,7 +195,7 @@ body {
 	/* 同一行，块标签 */
 	padding: 40px 40px;
 	/* line-height: 80px; */
-	
+
 	cursor: pointer;
 	border-radius: 20px;
 }
@@ -176,7 +204,7 @@ body {
 	color: #97bbea;
 	/* font-weight: bold; */
 	font-family: 华文琥珀;
-	background-color: rgba(105,56,101,.6);
+	background-color: rgba(105, 56, 101, .6);
 	/* 当前li的边框覆盖率div的边框，我们让li的下边框为背景颜色白色，这样看上去就像没边框 */
 }
 
@@ -196,15 +224,15 @@ body {
 	/* div .active加空格是后代筛选，先搜索div在div中筛选，div .active不加空格当前div标签的二次筛选，同级筛选 */
 }
 
-.tabBox div a{
+.tabBox div a {
 	display: inline-block;
 }
 
-#game{
+#game {
 	position: relative;
 }
 
-#game img{
+#game img {
 	position: absolute;
 	opacity: 80%;
 	top: 50px;
@@ -214,17 +242,17 @@ body {
 	width: 1100px;
 }
 
-#communication img{
+#communication img {
 	border: 1px dashed transparent;
 	padding-top: 50px;
 }
 
-#scenery{
+#scenery {
 	position: relative;
 	padding-left: 400px;
 }
 
-#scenery img{
+#scenery img {
 	position: absolute;
 	opacity: 80%;
 	top: 50px;
@@ -234,11 +262,11 @@ body {
 	width: 1100px;
 }
 
-#note{
+#note {
 	position: relative;
 }
 
-#note img{
+#note img {
 	position: absolute;
 	opacity: 80%;
 	top: 50px;
@@ -248,64 +276,62 @@ body {
 	width: 1100px;
 }
 
-.introduce{
-	background-color: rgba(185,175,185,.6);
+.introduce {
+	background-color: rgba(185, 175, 185, .6);
 	float: left;
 	margin-left: 200px;
 	width: 1000px;
 	height: 2600px;
 }
 
-.nav{
+.nav {
 	position: sticky;
 	top: 300px;
 }
 
-.nav li{
-	
-}
+.nav li {}
 
-.nav li a{
+.nav li a {
 	background-color: #ffffff;
 	color: #828282;
 	font: 50px 楷体;
 	border: 2px solid black;
 }
 
-.nav li a:hover{
+.nav li a:hover {
 	background-color: #ffeec2;
 	color: #ff6363;
 }
 
-h1{
+h1 {
 	text-align: left;
 }
 
-p{
+p {
 	text-indent: 2em;
 }
 
-h3{
+h3 {
 	margin: 100px 50px;
 }
 
-#igame{
+#igame {
 	margin-top: 200px;
 }
 
-#iscenery{
+#iscenery {
 	margin-top: 200px;
 }
 
-#imusic{
+#imusic {
 	margin-top: 200px;
 }
 
-#ifile{
+#ifile {
 	margin-top: 200px;
 }
 
-.introduce p{
+.introduce p {
 	margin-top: 20px;
 	font: 22px 楷体;
 	font-weight: 600;
@@ -313,6 +339,6 @@ h3{
 }
 
 .introduce h1,
-.introduce h2{
+.introduce h2 {
 	margin-bottom: 40px;
 }
