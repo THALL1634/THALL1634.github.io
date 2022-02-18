@@ -30,6 +30,7 @@ li {
 	height: 40px;
 	background-color: #000000;
 	position: relative;
+	cursor: default;
 }
 
 body {
@@ -85,7 +86,7 @@ body {
 
 .lighting::before {
 	position: absolute;
-	content: "\Reach Higher Level";
+	content: "Reach Higher Level";
 	color: transparent;
 	background-image: linear-gradient(to right, #ff0000, #3fb400, #ff17e8, #8fff49, #ea4ca6);
 	-webkit-background-clip: text;
