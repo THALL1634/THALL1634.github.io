@@ -1,0 +1,311 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+
+li {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+	color: #666666;
+}
+
+body {
+	height: 10000px;
+}
+
+.header {
+	height: 31px;
+	background-color: #f1f1f1;
+	font: 12px "microsoft yahei";
+	color: #666666;
+
+}
+
+.header .log {
+	float: left;
+	height: 31px;
+	line-height: 31px;
+	margin-left: 160px;
+}
+
+.log a:hover {
+	color: #c81623;
+}
+
+.header .function {
+	float: right;
+	height: 31px;
+	width: 650px;
+	line-height: 31px;
+	margin-right: 140px;
+}
+
+.function ul li {
+	float: left;
+	margin-right: 15px;
+}
+
+.function ul li:last-child{
+	margin-right: 0;
+}
+
+.select::after {
+	content: '^';
+	padding-left: 10px;
+}
+
+.function ul li a:hover{
+	color: #c81623;
+}
+
+.label{
+	margin-top: 27px;
+	height: 56px;
+}
+
+.label h1 a{
+	float: left;
+	width: 175px;
+	height: 56px;
+	background-image: url(../img/logo.png);
+}
+
+.label .search{
+	float: left;
+	height: 32px;
+	width: 440px;
+	margin-left: 175px;
+	border: 2px solid #b1191a;
+	padding-left: 10px;
+}
+
+.label .btn{
+	
+	width: 58px;
+	height: 32px;
+	line-height: 32px;
+	background-color: #b1191a;
+	border: 2px solid #b1191a;
+	border-left: 0px;
+	padding-left: 24px;
+}
+
+.label .btn a{
+	font-size: 16px;
+	color: #faf4f4;
+}
+
+.label div{
+	float: left;
+	width: 715px;
+}
+
+.keywords{
+	float: left;
+	margin-left: 185px;
+	font: 12px "microsoft yahei";
+	line-height: 28px;
+}
+
+.keywords li{
+	float: left;
+	margin-right: 25px;
+}
+
+.keywords li a:hover{
+	color: #c81623;
+}
+
+.label .shopcar{
+	position: absolute;
+	left: 1159.6px;
+	width: 116px;
+	height: 11px;
+	font: 12px "microsoft yahei";
+	padding: 12px;
+	border: 1px solid #dfdfdf;
+	background-color: #f7f7f7;
+}
+
+.shopcar span{
+	margin-left: 20px;
+}
+
+.shopcar .num{
+	position: absolute;
+	top: -8px;
+	left: 116px;
+	padding: 2px;
+	width: 16px;
+	border-radius: 8px 8px 8px 0;
+	background-color: #e60012;
+	font-size: 12px;
+	color: #fefefe;
+}
+
+.row_nav{
+	height: 50px;
+	margin-top: 24px;
+	overflow: hidden;
+}
+
+.row_nav span{
+	float: left;
+	height: 50px;
+	width: 210px;
+	background-color: #b1191a;
+	line-height: 50px;
+	text-align: center;
+	color: #ffffff;
+}
+
+.variety{
+	font-size: 16px;
+	line-height: 65px;
+}
+
+.variety li{
+	float: left;
+	
+}
+
+.variety li a{
+	padding: 0 25px;
+}
+
+.variety li a:hover{
+	color: #c81623;
+}
+
+.colum_nav{
+	background-color: #c81623;
+	width: 210px;
+	float: left;
+}
+
+.colum_nav li{
+	height: 31px;
+	line-height: 31px;
+}
+
+.colum_nav a{
+	display: block;
+	font-size: 14px;
+	color: #ffffff;
+	padding-left: 8px;
+	margin-left: 2px;
+}
+
+.colum_nav li:hover a{
+	color: #c81623;
+	background-color: #f7f7f7;
+	
+}
+
+.nav_following{
+	position: relative;
+	height: 467px;
+}
+
+.nav_following img{
+	float: left;
+	margin: 10px;
+}
+
+.text_img{
+	position: absolute;
+	left: 950px;
+	top: 10px;
+	width: 228px;
+	height: 33px;
+	border: 1px solid #e4e4e4;
+	border-bottom: 0px solid #e4e4e4;
+	padding: 12px 10px 8px 10px;
+}
+
+.text h4{
+	line-height: 33px;
+	font: 14px "microsoft yahei";
+	color: #333333;
+}
+
+.text h4::after{
+	content: '更多 >';
+	float: right;
+	padding-right: 10px;
+}
+
+.text_img .text ul{
+	width: 248px;
+	margin: 10px 0px 20px -11px;
+	border: 1px solid #e4e4e4;
+	border-top: 1px dotted #e4e4e4;
+	
+}
+
+.text_img .text ul li{
+	white-space: nowrap;
+	overflow: hidden;
+	
+}
+
+.text_img .text ul li a{
+	display: inline-block;
+	font-size: 12px;
+	color: #666666;
+	padding: 12px 0px 0px 16px;
+	width: 93%;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	
+	
+}
+
+.text_img .text ul li:last-child{
+	padding-bottom: 12px;
+}
+
+.text_img .text ul li a span{
+	font-size: 12px;
+	font-weight: bold;
+	margin-right: 5px;
+	color: #e1251b;
+	background-color: rgb(97 53 50 / 8%);
+}
+
+.text_img .text ul li a:hover{
+	color: #e1251b;
+}
+
+.text_img .text .icons{
+	margin-top: 24px;
+}
+
+.text_img .text .icons li{
+	float: left;
+	width: 60px;
+	height: 70px;
+	border: 1px solid #e8e8e7;
+	border-top: 0px;
+	border-right: 0px;
+	font-size: 12px;
+	color: #666666;
+	background-image: url(../img/icons.png);
+	/* text-align: center; */
+}
+
+.text_img .text .icons li:last-child{
+	padding-bottom: 0px;
+}
+
+.text_img .text .icons li:nth-child(4n){
+	padding-right: 3px;
+	border-right: 1px solid #e8e8e7;
+}
+
+.text .icons li a{
+	margin-top: 30px;
+}
